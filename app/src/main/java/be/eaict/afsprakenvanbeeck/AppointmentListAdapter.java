@@ -31,14 +31,16 @@ public class AppointmentListAdapter extends ArrayAdapter<Appointment> {
 
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = inflater.inflate(R.layout.item_product_list, null);
+        TextView afspraakdatum = (TextView)v.findViewById(R.id.afspraak_datum);
         TextView afspraaktijd = (TextView)v.findViewById(R.id.afspraak_tijd);
         TextView afspraakdokter = (TextView)v.findViewById(R.id.afspraak_dokter);
         TextView afspraakplaats = (TextView)v.findViewById(R.id.afspraak_plaats);
 
-        afspraakdokter.setText(getItem(position).getContactName());
-        afspraaktijd.setText(Integer.toString(getItem(position).getHour()));
-        afspraakplaats.setText(getItem(position).getLocation());
 
+        afspraakdatum.setText(String.format("%d/%d/%d",getItem(position).getDay(),getItem(position).getMonth(),getItem(position).getYear()));
+        afspraaktijd.setText(String.format("%d:%d",getItem(position).getHour(),getItem(position).getMinute()));
+        afspraakdokter.setText(getItem(position).getContactName());
+        afspraakplaats.setText(getItem(position).getLocation());
 
 
         return v;

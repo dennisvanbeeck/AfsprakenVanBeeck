@@ -23,17 +23,19 @@ public class MainActivity extends AppCompatActivity {
 
         ListView afspraakListView = (ListView) findViewById(R.id.listview_afspraak);
         List<Appointment> appointments = (new AppointmentDummyRepository()).getAppointments();
-
         afspraakListView.setAdapter(new AppointmentListAdapter(this,appointments));
 
-        /*afspraakListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+        afspraakListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i = new Intent(MainActivity.this, DetailActivity.class);
-                i.putExtra("afspraak", Appointment[position]);
-                startActivity(i);
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                Bundle b = new Bundle();
+                b.putInt("position", position);
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                intent.putExtras(b);
+                startActivity(intent);
             }
-        });*/
+        });
     }
 }
 
