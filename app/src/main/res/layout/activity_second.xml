@@ -6,61 +6,98 @@
     android:layout_height="match_parent"
     tools:context="be.eaict.afsprakenvanbeeck.SecondActivity">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp">
 
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+            android:id="@+id/appointmentWith"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="Appointmet with"
+            android:gravity="bottom|center" />
+
+        <TextView
+            android:id="@+id/textView_dokter"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="Textview"
+            android:gravity="top|center"
+            android:textSize="23dp"
+            android:textColor="#000000"/>
+        </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/textView_dokter"
-        android:layout_width="119dp"
-        android:layout_height="19dp"
-        android:text="Appointmet with"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="34dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
 
-    <TextView
-        android:id="@+id/appointmentWith"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Textview"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="73dp" />
+        <TextView
+            android:id="@+id/textView_datum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="16dp"/>
 
-    <TextView
-        android:id="@+id/textView_datum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="111dp" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView_plaats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="141dp" />
 
-    <TextView
-        android:id="@+id/reden"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reden:"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="210dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
-    <TextView
-        android:id="@+id/textView_afspraakReden"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="235dp" />
+        <TextView
+            android:id="@+id/textView_plaats"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="TextView"
+            android:textSize="16dp"/>
 
-    </LinearLayout>
+                <Button
+                    android:id="@+id/button_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="open map"
+                    android:textSize="10dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/reden"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Reden:" />
+
+        <TextView
+            android:id="@+id/textView_afspraakReden"
+            android:layout_width="fill_parent"
+            android:layout_height="340dp"
+            android:text="TextView"
+            android:background="#D3D3D3"
+            android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>
