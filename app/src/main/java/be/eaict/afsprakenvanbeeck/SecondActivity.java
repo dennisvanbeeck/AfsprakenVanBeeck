@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -40,6 +41,13 @@ public class SecondActivity extends AppCompatActivity {
         afspraakreden.setText(appointments.get(position2).getReason());
 
 
+        //I kan mijn tweede image niet aanroepen vanuit mijn drawable en kan mijn imageviews niet aanroepen van mijn xml
+        /*ImageView imagetijd = (ImageView)findViewById(R.id.imageviewtijd);
+        ImageView imageplaats = (ImageView)findViewById(R.id.imageviewtijd);
+
+        imagetijd.setImageResource(R.drawable.lc_query_builder_48px);
+        imageplaats.setImageResource(R.drawable.location);*/
+
         Button buttonmap = (Button)findViewById(R.id.button_map);
         buttonmap.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
@@ -51,5 +59,7 @@ public class SecondActivity extends AppCompatActivity {
                 }
             }
         });
+
+
     }
 }
